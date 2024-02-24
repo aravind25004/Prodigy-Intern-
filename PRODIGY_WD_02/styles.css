@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.heading.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    background: url('demo1.png');
+    background-position: center;
+}
+
+.landing {
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.content-container {
+    text-align: left;
+    color: white;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.content-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: goldenrod;
+}
+
+.about {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.go-to-stopwatch {
+    text-decoration: none;
+    display: flex;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right, #27ae60, #218e53);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #218e53, #1a7340);
+}
+
+button i {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 35px; 
+    flex-grow: 1; 
+    margin-left: 20px;
+}
+
+.media p {
+    font-size: 2em;
+    margin-left: 0px;
+    margin-right: 2em;
+    color: black;
+}
+
+.media a {
+    position: relative;
+    color: #05d9f5;
+    margin: 6px 8px;
+    font-size: 35px;
+    transition: 0.5s;
+    transition-property: transform;
+}
+
+.media a:not(:last-child) {
+    margin-right: 60px;
+}
+
+.media p{
+    font-size: 2em;
+    color: #f1f505;
+}
+
+.media a:hover {
+    transform: scale(1.4);
+    color: white;
+}
