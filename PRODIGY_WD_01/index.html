@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Website Landing Page Design</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+</head>
+<body>
+  <section class="section-underline">
+    <input type="checkbox" id="check">
+    <header>
+      <h2><i><img src="logo.png" width="65" height="60" class="logo"></i></h2>
+      <div class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Problems</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <label for="check">
+        <i class="fas fa-bars menu-btn"></i>
+        <i class="fas fa-times close-btn"></i>
+      </label>
+
+      <div class="moon-container">
+        <button id="themeDark" onclick="toggleTheme()"><i class="fa-solid fa-cloud-moon"></i></button>
+      </div>
+    </header>
+
+    <div class="content center-text">
+      <h1>Introduction To GitHub   <i class="fa-brands fa-github"></i></h1>
+      <p>
+        Welcome to my GitHub world, where coding adventures come to life! To unveil the full magic of my repositories, projects, and contributions, I invite you to log in and join the coding journey. Logging in not only grants you access to the intricate lines of code but also opens the door to collaboration, feedback, and a shared passion for technology. Don't miss out on the vibrant community and the captivating projects that await behind the login screen. Let's code together and make a difference!
+      </p>
+      <p>
+        Whether you're a seasoned developer, a curious learner, or someone just starting their coding journey, logging in provides you with a personalized experience. Explore repositories you've starred, track your contributions, and engage with a community that shares your passion for innovation and open-source collaboration.
+      </p>
+
+      <p>
+        By logging in, you also gain the ability to showcase your own projects, contribute to open-source initiatives, and connect with like-minded developers. The GitHub experience is not just about code; it's about building connections, fostering creativity, and embracing the ever-evolving landscape of technology.
+      </p>
+
+      <p>
+        Join me on this exciting coding expedition! Your login opens the gateway to a world of possibilities, where lines of code transform into meaningful solutions, and where collaboration transcends geographical boundaries. Let's make our mark on the digital landscape together!
+      </p>
+
+      <div class="login-container">
+        <h3>Login To Know More!</h3>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+
+        <button>Login</button>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-icons">
+    <p>For Further Queries, Contact Me Via</p>
+   <a href="https://www.instagram.com/aravind25__?igsh=dHZxZms4dTJqcGky"><i class="fa-brands fa-linkedin"></i></a>
+   <a href="https://github.com/aravind25004"><i class="fa-brands fa-github"></i></a>
+   <i class="fab fa-instagram"></i>
+ </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const themeToggle = document.getElementById('themeDark');
+    const navigation = document.querySelector('.navigation');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', function () {
+      navigation.classList.toggle('dark-mode');
+      body.classList.toggle('dark-mode');
+    });
+  });
+</script>
+</body>
+</html>

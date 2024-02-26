@@ -1,0 +1,481 @@
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    section {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: #191616;
+      background-image: linear-gradient(135deg, #191616 11%, #FC00FF 50%, #00DBDE 90%);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .section-underline::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: white;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .section-underline:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      padding: 30px 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .navigation {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    header .logo {
+      position: relative;
+      color: white;
+      font-size: 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    header .navigation a {
+      color: whitesmoke;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 2px 15px;
+      border-radius: 20px;
+      position: relative;
+      margin-right: 30px;
+      overflow: hidden;
+    }
+
+    header .navigation a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      background: white;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    header .navigation a:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    header .navigation a:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    header .navigation a:hover {
+      background: black;
+      transform: scale(1.2);
+    }
+
+    .moon-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .moon-container button {
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.5s;
+      border-radius: 50%;
+    }
+
+    .moon-container button:hover {
+      background-color: #f9f9f9;
+      background-image: linear-gradient(135deg, #f9f9f9 11%, #ffaf00 50%, #de6900 60%, #131111 90%);
+      color: black;
+      transform: scale(1.1);
+    }
+
+    .logo {
+      border-radius: 50%;
+      object-fit: cover;
+      outline: 5px solid white;
+    }
+
+    label {
+      display: none;
+    }
+
+    #check {
+      z-index: 3;
+      display: none;
+    }
+
+    .content h1 {
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .content {
+      text-align: left;
+      padding: 50px;
+      color: white;
+    }
+
+    .center-text {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .center-text h1 {
+      position: relative;
+      align-items: center;
+      font-size: 2.5em;
+      color:#e8cce8;
+    }
+
+    .center-text p {
+      text-align: left;
+      font-size: 1em;
+      color: white;
+    }
+
+    .center-text h1::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: #0f0230;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .center-text h1:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    footer
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+      background: #8e66f2;
+      color: whitesmoke;
+    }
+
+    .footer-icons {
+      display: flex;
+      color: whitesmoke;
+    }
+
+    .footer-icons p{
+      margin-right: 20px;
+      font-size: 20px;
+      color: whitesmoke;
+    }
+
+    .footer-icons .fa-github:hover{
+      color: black;
+      transform: scale(1.3);
+    }
+
+    .footer-icons .fa-linkedin:hover
+    {
+      color: #0a66c2;
+      transform: scale(1.3);
+    }
+
+    .footer-icons .fa-instagram:hover{
+      background-image: linear-gradient(135deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(245, 96, 64) 100%);
+      transform: scale(1.3);
+    }
+    .footer-icons i {
+      font-size: 30px;
+      color: white;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 960px) {
+      header .navigation {
+        display: none;
+        margin-right: auto;
+      }
+
+      label {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transition: 0.5s;
+        transition-property: color;
+      }
+
+      label:hover {
+        color: #fff;
+      }
+
+      label .close-btn {
+        display: none;
+        align-items: left;
+      }
+
+      #check:checked~header .navigation {
+        z-index: 2;
+        position: fixed;
+        background: lightskyblue;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .dark-mode #check:checked~header .navigation{
+        background: blueviolet;
+      }
+      #check:checked~header .navigation a {
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      #check:checked~header label .menu-btn {
+        display: none;
+      }
+
+      #check:checked~header label .close-btn {
+        z-index: 2;
+        display: block;
+        position: absolute;
+        left:35px;
+      }
+
+      label .menu-btn {
+        position: absolute;
+        right: 45px;
+      }
+
+      header .logo {
+        position: relative;
+        bottom: -8px;
+      }
+    }
+
+    @media (max-width: 960px) {
+      .moon-container {
+        margin-top: 20px;
+        margin-left: auto;
+      }
+    }
+
+    .dark-mode header .navigation a {
+      color: black;
+    }
+
+    .dark-mode .moon-container button {}
+
+    .dark-mode .logo {
+      outline: 5px solid black;
+    }
+
+    .dark-mode section {
+      background-color: #f9f9f9;
+      background-image: linear-gradient(135deg, #f9f9f9 11%, #ffaf00 50%, #de6900 60%, #131111 90%);
+    }
+
+    .dark-mode header .navigation a:hover {
+      background: white;
+    }
+
+    .dark-mode .moon-container button:hover {
+      background-color: #191616;
+      background-image: linear-gradient(135deg, #191616 11%, #FC00FF 50%, #00DBDE 90%);
+    }
+
+    .dark-mode .content {
+      text-align: left;
+      padding: 50px;
+      color: black;
+    }
+
+    .dark-mode .content h1{
+      color: black;
+    }
+
+    .dark-mode header .navigation a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 1px;
+      padding: 2px 15px;
+      border-radius: 20px;
+      position: relative;
+      margin-right: 30px;
+      overflow: hidden;
+    }
+
+    .dark-mode header .navigation a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+      left: 0;
+      background: black;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .dark-mode header .navigation a:hover::before {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .login-container h3{
+      align-items: center;
+      color: #0ee898;
+      text-decoration: underline;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .login-container input:hover{
+      transform: scale(1.05);
+    }
+    .login-container button {
+      background-color: #191616;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-container button:hover {
+      background-color: red;
+      transform: scale(1.1);
+    }
+
+    .dark-mode .login-container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .dark-mode .center-text p {
+      text-align: left;
+      font-size: 1em;
+      color:#222;
+    }
+
+    .dark-mode .center-text h1{
+        color: #520e54;
+    }
+    .dark-mode .login-container label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .dark-mode .login-container h3{
+      text-align: center;
+      color: black;
+      text-decoration: underline;
+    }
+    .dark-mode .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .dark-mode .login-container input:hover{
+      transform: scale(1.05);
+    }
+    .dark-mode .login-container button {
+      background-color: #191616;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block; /* Ensure the button takes the full width */
+      margin: 0 auto; /* Center the button horizontally */
+    }
+
+    .dark-mode .login-container button:hover {
+      background-color: red;
+      transform: scale(1.1);
+    }
